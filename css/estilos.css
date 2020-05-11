@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://media.gettyimages.com/photos/blue-gradient-soft-background-picture-id835876602?b=1&k=6&m=835876602&s=612x612&w=0&h=D46he64vw3dtjTrPmg24cau0kHWL4tXt1F_vnUyRLRg=');
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+  }
+  
+  .menu {
+    background-color: #ffffff;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+  }
