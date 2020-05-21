@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Guilherme Gomes</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guilherme Gomes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Press+Start+2P&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/667e426467.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav class = "menu">
-          <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
-        <h1 class = "site-title"> Guilherme de Oliveira Gomes</h1>
-        <h2 class = "site-subtitle"> Developer Jr.</h2>
-    </header>
+
+  <header>
+    <nav class="menu">
+      <ul class="container">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#conhecimentos">Conhecimentos</a></li>        
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="titulo">
+      <h1 class="site-title"> Guilherme Gomes</h1>
+      <h2 class="site-subtitle"> Support Analyst</h2>
+      <h2 class="site-subtitle"> Software Development Student</h2>
+    </div>    
+  </header>
+
+  <section class="sobre container" id="sobre">
+    <h2>Sobre</h2>
+
+    <figure class="avatar"> 
+      <img src="img/guilherme.jpeg" alt="Guilherme Gomes">
+    </figure>
+
+    <p>Sou estudante de Sistemas de Informação na PUC Minas 📚, atualmente trabalhando como Analista de Suporte na Stefanini.
+    Apaixonado por tecnologia 💻, principalmente com as área de desenvolvimento de software e data science.</p>
+    <p>Fora do ambiente profissional gosto de correr ao ar livre, ouvir música 🎧, ler livros, assistir séries e filmes e também passar um tempo jogando 🎮</p>
+    <p>Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da alura</a></p>
+
+  </section>
+  
+  <section class="conhecimentos container" id="conhecimentos">
+    <h2>Conhecimentos</h2>
+
+    <div class="grid">
+      <figure>        
+        <img class="img-portfolio" src="./img/python.png" alt="Python">     
+        <figcaption>Python</figcaption>        
+      </figure>
+
+      <figure>        
+        <img class="img-portfolio" src="./img/linguagemC.png" alt="C#">     
+        <figcaption>C#</figcaption>        
+      </figure>       
+
+      <figure>        
+        <img class="img-portfolio" src="./img/sql.png" alt="SQL">     
+        <figcaption>SQL</figcaption>          
+      </figure>
+
+      <figure>        
+        <img class="img-portfolio" src="./img/html.png" alt="HTML">     
+        <figcaption>HTML</figcaption>        
+      </figure>
+      
+      <figure>        
+        <img class="img-portfolio" src="./img/css.png" alt="CSS">     
+        <figcaption>CSS</figcaption>        
+      </figure>
+
+      <figure>        
+        <img class="img-portfolio" src="./img/office365.png" alt="Office 365">     
+        <figcaption>Office 365</figcaption>        
+      </figure>
+    </div>
+    
+  </section>  
+
+  <section class="contato container" id="contato">
+		<h2>Contato</h2>
+	
+		<div class="grid icons">
+			<a target="_blank" href="https://github.com/GomesGuilherme07">
+				<i class="fab fa-github"></i>
+			</a>			
+			<a target="_blank" href="https://www.linkedin.com/in/guilhermeoliveira070">
+				<i class="fab fa-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/Guiogomes_">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a target="_blank" href="https://www.instagram.com/guilherme.ogomes/">
+				<i class="fab fa-instagram"></i>
+      </a>
+      <!-- 
+        <a href="malito:guilhermegomes07@hotmail.com">
+				<i class="fas fa-envelope-square"></i>
+			</a>
+			-->
+		</div>
+	</section>
+
+
 </body>
+
 </html>

@@ -1,38 +1,227 @@
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://media.gettyimages.com/photos/blue-gradient-soft-background-picture-id835876602?b=1&k=6&m=835876602&s=612x612&w=0&h=D46he64vw3dtjTrPmg24cau0kHWL4tXt1F_vnUyRLRg=');
-    background-size: auto 100vh;
-    font-family: Arial;
-    height: 100vh;
-  }
+  background-image: url('../img/fundo.jpg');  
+  background-size: auto 100vh;
+  font-family: 'Source Code Pro', monospace;;
+  height: 100vh;
+  font-size: 12px; 
   
-  .menu {
-    background-color: #ffffff;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
   }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.menu {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+} 
   
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
   
-  .menu li {
-    list-style: none;
-  }
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 10px;  
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+  text-decoration: none;
+  background-color: rgb(37, 82, 103);
+  color: whitesmoke;
+}
   
-  a {
-    color: teal;
-    text-decoration: none;
-  }
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(40vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
   
-  a:hover {
-    text-decoration: underline;
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
   }
+
+  to{
+    transform: scale(1) translateY(0);
+    opacity: 1;    
+  }
+
+}
+
+   
+.site-subtitle,
+.site-title {
+  color: rgb(255, 254, 254);
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.site-title {
+  font-size: 6em;  
+}
   
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
-  }
+.site-subtitle {
+  /*font-style: italic;  */
+  line-height: 1.8em;
+}
+
+.sobre,
+.contato,
+.conhecimentos {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+.sobre h2,
+.contato h2,
+.conhecimentos h2 {
+  color: whitesmoke;
+  margin-bottom: 1.0em;
+  font-size: 2.4em;
+}
+
+.sobre p {
+  color: #ffffff;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: aqua;
+}
+
+.sobre a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;  
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+@media (max-width: 400px){
+.sobre .avatar {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+}
+.sobre .avatar img {
+  height: 300px;
+  width: 300px;
   
-  .site-subtitle {
-    font-style: italic;
+}
+
+.conhecimentos .grid {
+  display: grid;
+  gap: 2em;  
+}
+
+@media (min-width: 560px) {
+  .conhecimentos .grid {    
+    grid-template-columns: repeat(2,240px);
+    justify-content: center;
   }
+}
+
+@media (min-width: 880px) {
+  .conhecimentos .grid {    
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);    
+  }
+}
+
+.conhecimentos figure {
+  text-align: center;
+}
+
+.img-portfolio {  
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  object-position: left bottom;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  text-shadow:  0px 0px 10px #3FBDBF;
+}
